@@ -8,11 +8,13 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #24303f;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5;
+  background:
+    radial-gradient(circle at top, rgba(26, 35, 126, 0.08), transparent 35%),
+    linear-gradient(180deg, #f7f9fc 0%, #eef3f8 100%);
 }
 
 header {
@@ -42,10 +44,10 @@ main {
 }
 
 section {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.95);
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(31, 41, 55, 0.08);
   width: 100%;
   max-width: 500px;
 }
@@ -59,19 +61,96 @@ section h3 {
 
 .activity-card {
   margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 18px;
+  border: 1px solid #dbe4f0;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  box-shadow: 0 12px 24px rgba(26, 35, 126, 0.08);
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
-  color: #0066cc;
+  color: #0f4c81;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #eef5ff;
+  border: 1px solid #cfe0fb;
+}
+
+.participants-title {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #1a237e;
+  letter-spacing: 0.02em;
+}
+
+.participants-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  color: #355070;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.participant-item + .participant-item {
+  margin-top: 8px;
+}
+
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.participant-remove-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 999px;
+  background: #fff2f2;
+  color: #b42318;
+  border: 1px solid #f3b4b4;
+  flex-shrink: 0;
+}
+
+.participant-remove-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.participant-remove-btn:hover {
+  background: #ffe1e1;
+  border-color: #e98c8c;
+}
+
+.participant-remove-btn:focus-visible {
+  outline: 3px solid rgba(180, 35, 24, 0.2);
+  outline-offset: 2px;
+}
+
+.empty-participants {
+  font-style: italic;
+  color: #62748a;
+  list-style: none;
 }
 
 .form-group {
